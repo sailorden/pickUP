@@ -5,9 +5,9 @@
       <button class='col col-50'>Get Picked Up</button>
     </div>
 
-    <div class='list'>
-      <a ng-repeat='line in pickUpLines' class=''>
-        <div class='row'>
+    <ul class='list'>
+      <li ng-repeat='line in pickUpLines' class='' style='border: 1px solid lightgray'>
+        <div class='row' on-touch='togglePickUp(line._id)'>
           <div class='col col-20' style='margin: auto 0; padding: 0'>
             <div class='row col col-middle'>
               <div class='icon ion-person-stalker center tripleSize'></div>
@@ -24,7 +24,16 @@
             <img ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{line.lat}},{{line.long}}&zoom=13&size=100x100&markers={{line.lat}},{{line.long}}">
           </div>
         </div>
-      </a>
+        <div class='list' ng-show='isPickUpShown(line._id)'>
+          <a ng-repeat='response in line.responses' class='item item-thumbnail-left' ng-href='#/app/showResponse'>
+            <img ng-src='{{response.image}}'>
+            <h2>{{response.name}}</h2>
+            <h4>{{response.age}}</h4>
+            <h4>{{response.location}}</h4>
+            <p>{{response.response}}</p>
+          </a>
+        </div>
+      </li>
     </div>
 
     <!-- <div class='list'>
