@@ -1,5 +1,9 @@
 /* Empty. Add your own CSS if you like */
 
+em {
+  font-style: italic;
+}
+
 .navbarButton {
   margin-left: 2em;
 }
@@ -69,4 +73,9 @@
 
 .gray {
   color: gray;
+}
+
+.button.button-energized {
+  color: #444;
+  font-weight: bold;
 }

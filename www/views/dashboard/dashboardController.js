@@ -2,7 +2,7 @@
 
 angular.module('pickUp')
 
-.controller('DashboardCtrl', ['$scope', function($scope) {
+.controller('DashboardCtrl', ['$scope', '$location', function($scope, $location) {
 
   $scope.pickUpShown = null;
   $scope.pickUpLines = [
@@ -15,6 +15,7 @@ angular.module('pickUp')
       long: '-122',
       responses: [
         {
+          _id: '00A',
           name: 'Lisa',
           image: 'http://freedwallpaper.com/wp-content/uploads/2014/12/Best-Cute-Girls-Wallpapers-HD-Desktop.jpg',
           age: '29',
@@ -22,6 +23,7 @@ angular.module('pickUp')
           response: 'I like that.'
         },
         {
+          _id: '00B',
           name: 'Joanie',
           image: 'http://freedwallpaper.com/wp-content/uploads/2014/04/8589130465188-beautiful-faces-cute-girls-wallpaper-hd.jpg',
           age: '31',
@@ -29,6 +31,7 @@ angular.module('pickUp')
           response: 'Yeah man'
         },
         {
+          _id: '00C',
           name: 'Sara',
           image: 'http://media.doisongphapluat.com/247/2015/1/16/gai-xinh.jpg',
           age: '24',
@@ -61,12 +64,14 @@ angular.module('pickUp')
     } else {
       $scope.pickUpShown = pickUpID;
     }
-    console.log('pickupShown:', $scope.pickUpShown);
-    console.log('pickupID:', pickUpID)
   };
 
   $scope.isPickUpShown = function(pickUpID) {
     return $scope.pickUpShown === pickUpID;
+  };
+
+  $scope.goToResponse = function(responderId) {
+    $location.path('app/showResponse/' + responderId);
   };
 
 }]);

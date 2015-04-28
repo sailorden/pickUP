@@ -107,7 +107,7 @@ angular.module('pickUp', ['ionic', 'ui.router', 'ngCordova'])
   })
 
   .state('app.showResponse', {
-    url: '/showResponse',
+    url: '/showResponse/:responderId',
     views: {
       'menuContent': {
         templateUrl: 'views/showResponse/showResponse.html',

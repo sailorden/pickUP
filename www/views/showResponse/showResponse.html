@@ -1,5 +1,38 @@
 <ion-view view-title="">
   <ion-content>
-    <h1>Show Response</h1>
+
+    <div class='row' style='background-color: #444; box-shadow: 0 5px 5px 0 gray'>
+      <div class='col col-60'>
+        <div class='row'>
+          <h4 class='grayBack'>My Line: {{myLine}} </h4>
+        </div>
+        <div class='row grayBack'>
+          <em>{{dateOfDrop}}</em>
+        </div>
+      </div>
+      <div>
+        <img class='col col-40' ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{lat}},{{long}}&zoom=13&size=100x100&markers={{lat}},{{long}}">
+      </div>
+    </div>
+
+    <div class='aboveMargin-small center'>
+      <div>
+        <img ng-src='{{person.image}}' width='200px'>
+      </div>
+      <h2>{{person.name}}</h2>
+      <h4>{{person.age}}</h4>
+      <h4>{{person.location}}</h4>
+      <p>{{person.bio}}</p>
+
+      <div class='grayBack' style='box-shadow: 0 5px 5px 0 gray'>
+        Her Response:<br>
+        <span class='doubleSize'>{{person.response}}</span>
+      </div>
+    </div>
+
+    <div class='aboveMargin-small center'>
+      <button class='button button-energized'>Match with {{person.name.split(' ')[0]}}</button>
+    </div>
+
   </ion-content>
 </ion-view>

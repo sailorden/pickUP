@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class='list' ng-show='isPickUpShown(line._id)'>
-          <a ng-repeat='response in line.responses' class='item item-thumbnail-left' ng-href='#/app/showResponse'>
+          <a ng-repeat='response in line.responses' class='item item-thumbnail-left' on-touch='goToResponse(response._id)'>
             <img ng-src='{{response.image}}'>
             <h2>{{response.name}}</h2>
             <h4>{{response.age}}</h4>
