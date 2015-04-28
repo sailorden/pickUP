@@ -1,12 +1,12 @@
 <ion-view view-title="">
   <ion-content>
     <div class='row'>
-      <button class='col col-50 toggleOn'>Pick Up</button>
-      <button class='col col-50'>Get Picked Up</button>
+      <button pickup-toggle class='col col-50 toggleOn' on-touch='switchTemplates()'>Pick Up</button>
+      <button pickup-toggle class='col col-50' on-touch='switchTemplates()'>Get Picked Up</button>
     </div>
 
-    <ul class='list'>
-      <li ng-repeat='line in pickUpLines' class='' style='border: 1px solid lightgray'>
+    <ul class='list' ng-show='seeMyDrops'>
+      <li ng-repeat='line in pickUpLines' style='border: 1px solid lightgray'>
         <div class='row' on-touch='togglePickUp(line._id)'>
           <div class='col col-20' style='margin: auto 0; padding: 0'>
             <div class='row col col-middle'>
@@ -34,16 +34,17 @@
           </a>
         </div>
       </li>
+    </ul>
+
+    <div class='list' ng-hide='seeMyDrops'>
+      <div ng-repeat='line in pickedUpDrops' class='item item-thumbnail-left' style='border: 1px solid lightgray' on-touch='goToWriteResponse(line._id)'>
+        <img class='list-profile-pic' ng-src='{{line.image}}'>
+        <h2 style='font-size:1.3em'> {{line.name}}, {{line.age}} </h2>
+        <p style='color: black'>{{line.line}}</p>
+        <p style='margin-top: 1em;'>Found At: <span style='margin-left: 2em'>{{line.datePickedUp}}</span></p>
+        <!-- <img ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{line.lat}},{{line.long}}&zoom=13&size=100x100&markers={{line.lat}},{{line.long}}"> -->
+      </div>
     </div>
 
-    <!-- <div class='list'>
-      <a ng-repeat='person in views' class='item item-thumbnail-left'>
-        <img ng-src='{{person.image}}'>
-        <h2>{{person.name}}</h2>
-        <h4>{{person.age}}</h4>
-        <h4>{{person.location}}</h4>
-        <p>{{person.response}}</p>
-      </a>
-    </div> -->
   </ion-content>
 </ion-view>

@@ -1,5 +1,40 @@
 <ion-view view-title="">
   <ion-content>
-    <h1>Write Response</h1>
+    
+    <div class='row' style='background-color: #444; box-shadow: 0 5px 5px 0 gray;'>
+      <div class='col col-60 grayBack'>
+        <div class='row'>
+          <div class='doubleSize'>{{pickup.line}}</div>
+        </div>
+        <div class='row grayBack col col-100' style='margin-top: 1em;'>
+          <em>Dropped: <span style='margin-left: 38px'>{{pickup.dateLeft}}</span> </em><br>
+          <em>Picked Up: <span style='margin-left: 29px'>{{pickup.datePickedUp}}</span> </em>
+        </div>
+      </div>
+      <div style='margin: auto 0;'>
+        <img class='col col-40' ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{pickup.lat}},{{pickup.long}}&zoom=13&size=100x100&markers={{pickup.lat}},{{pickup.long}}">
+      </div>
+    </div>
+
+    <div class='aboveMargin-small center'>
+      <div>
+        <img ng-src='{{pickup.image}}' width='200px'>
+      </div>
+      <h2>{{pickup.name}}, {{pickup.age}}</h2>
+      <h4>{{pickup.location}}</h4>
+      <p>{{pickup.bio}}</p>
+
+      <div class='grayBack' style='box-shadow: 0 5px 5px 0 gray'>
+        Respond:<br>
+        <label class='item item-input grayBack' style='border:none'>
+          <input type='text' class='center' style='color: white; font-size: 1.5em;' placeholder='Write to her'>
+        </label>
+      </div>
+    </div>
+
+    <div class='aboveMargin-small center row'>
+      <button class='button button-energized col col-50 col-offset-25'>Send</button>
+    </div>
+
   </ion-content>
 </ion-view>

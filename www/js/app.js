@@ -117,7 +117,7 @@ angular.module('pickUp', ['ionic', 'ui.router', 'ngCordova'])
   })
 
   .state('app.writeResponse', {
-    url: '/writeResponse',
+    url: '/writeResponse/:pickUpId',
     views: {
       'menuContent': {
         templateUrl: 'views/writeResponse/writeResponse.html',

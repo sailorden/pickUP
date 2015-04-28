@@ -64,11 +64,11 @@ em {
 }
 
 .item p {
-  white-space: wrap;
+  white-space: normal;
 }
 
 .word-wrap {
-
+  white-space: normal;
 }
 
 .green {
@@ -82,4 +82,14 @@ em {
 .button.button-energized {
   color: #444;
   font-weight: bold;
+}
+
+.list-profile-pic {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  max-width: 80px;
+  max-height: 80px;
+  width:100%;
+  height: 100%;
 }
