@@ -8,12 +8,23 @@ angular.module('pickUp')
     {
       line: "Let's act like a calendar and date!",
       date: '04/27 7:42pm',
-      numberOfResponses: 8
+      numberOfResponses: 8,
+      lat: '37',
+      long: '-122'
     },
     {
       line: "You must be from Tennessee, cuz you're the only 10 I see!",
       date: '04/25 9:20am',
-      numberOfResponses: 19
+      numberOfResponses: 19,
+      lat: '38.9544',
+      long: '-77.3464'
+    },
+    {
+      line: "Once upon a time I went to market and on the way home I met a man who said he was a genie and I took him at his word.",
+      date: '04/24 11:30am',
+      numberOfResponses: 173,
+      lat: '38.944',
+      long: '-77.3464'
     },
   ];
 

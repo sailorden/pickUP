@@ -4,5 +4,10 @@
       <input type='text' placeholder='Pick up line' maxlength='100'>
     </label>
     <button class='button button-positive button-block' on-touch='dropLine'>Drop Line</button>
+
+    <div class='center aboveMargin-small'>
+      <img ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{lat}},{{long}}&zoom=13&size=300x300&markers={{lat}},{{long}}">
+    </div>
+
   </ion-content>
 </ion-view>

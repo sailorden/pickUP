@@ -6,15 +6,22 @@
     </div>
 
     <div class='list'>
-      <a ng-repeat='line in pickUpLines' class='item'>
+      <a ng-repeat='line in pickUpLines' class=''>
         <div class='row'>
-          <h1 class='col col-20 green word-wrap'>{{line.numberOfResponses}}</h1>
-          <div class='row col col-60'>
-            <h4>{{line.line}}</42>
-            <h4>{{line.date}}</h4>
+          <div class='col col-20' style='margin: auto 0; padding: 0'>
+            <div class='row col col-middle'>
+              <div class='icon ion-person-stalker center tripleSize'></div>
+            </div>
+            <div class='row'>
+              <h2 class='green word-wrap' style='margin: auto'>{{line.numberOfResponses}}</h2>
+            </div>
           </div>
-          <div class='row col col-20'>
-            Map
+          <div class='row col col-50'>
+            <p>{{line.line}}</p>
+            <h5 class='gray'>{{line.date}}</h5>
+          </div>
+          <div class='row col col-30' style='margin: auto'>
+            <img ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{line.lat}},{{line.long}}&zoom=13&size=100x100&markers={{line.lat}},{{line.long}}">
           </div>
         </div>
       </a>

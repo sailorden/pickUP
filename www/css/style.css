@@ -31,6 +31,10 @@
   font-size: 1.5em;
 }
 
+.tripleSize {
+  font-size: 2em;
+}
+
 .grayBack {
   background-color: #444;
   color: white;
@@ -51,10 +55,18 @@
   color: #444;
 }
 
+.item p {
+  white-space: wrap;
+}
+
 .word-wrap {
-  
+
 }
 
 .green {
   color: green;
+}
+
+.gray {
+  color: gray;
 }
