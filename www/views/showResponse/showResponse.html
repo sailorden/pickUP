@@ -1,16 +1,19 @@
 <ion-view view-title="">
   <ion-content>
 
-    <div class='row' style='background-color: #444; box-shadow: 0 5px 5px 0 gray'>
-      <div class='col col-60'>
+    <div class='row' style='background-color: #444; box-shadow: 0 5px 5px 0 gray;'>
+      <div class='col col-60 grayBack'>
+        <!-- <div class='row col col-80 col-offset-20'>
+          My Pick Up Line:
+        </div> -->
         <div class='row'>
-          <h4 class='grayBack'>My Line: {{myLine}} </h4>
+          <div class='doubleSize'>{{myLine}}</div>
         </div>
-        <div class='row grayBack'>
+        <div class='row grayBack col col-80 col-offset-20' style='margin-top: 1em;'>
           <em>{{dateOfDrop}}</em>
         </div>
       </div>
-      <div>
+      <div style='margin: auto 0;'>
         <img class='col col-40' ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{lat}},{{long}}&zoom=13&size=100x100&markers={{lat}},{{long}}">
       </div>
     </div>

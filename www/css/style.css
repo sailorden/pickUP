@@ -22,6 +22,10 @@ em {
   text-align: center;
 }
 
+.block {
+  display: block;
+}
+
 .userPicture {
   text-align: center;
 }

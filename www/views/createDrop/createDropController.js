@@ -5,6 +5,7 @@ angular.module('pickUp')
 .controller('CreateDropCtrl', ['$scope', '$cordovaGeolocation', function($scope, $cordovaGeolocation) {
 
   var lat, long;
+  $scope.duration = 12;
 
   var posOptions = { timeout: 10000, enableHighAccuracy: true };
   

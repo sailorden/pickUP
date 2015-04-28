@@ -3,6 +3,27 @@
     <label class='item item-input aboveMargin-small'>
       <input type='text' placeholder='Pick up line' maxlength='100'>
     </label>
+    <div class='row'>
+      <div class='col col-75'>
+      <span class='doubleSize'> Drop Pick Up Line for:</span>
+    </div>
+    <div class='col col-25'>
+      <span class='doubleSize'><strong>{{duration}} hrs</strong></span>
+    </div>
+    </div>
+    <div class="range">
+      <input type="range" min='1' max='24' ng-model='duration'>
+    </div>
+    <!-- <label class='item item-input item-select'>
+      <div class='input-label'>
+        Hours to leave pick up line:
+      </div>
+      <select>
+        <option>1 hr</option>
+        <option>2 hr</option>
+        <option>3 hr</option>
+      </select>
+    </label> -->
     <button class='button button-positive button-block' on-touch='dropLine'>Drop Line</button>
 
     <div class='center aboveMargin-small'>
