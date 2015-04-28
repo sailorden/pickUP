@@ -1,5 +1,33 @@
 <ion-view view-title="">
   <ion-content>
-    <h1>Dashboard</h1>
+    <div class='row'>
+      <button class='col col-50 toggleOn'>Pick Up</button>
+      <button class='col col-50'>Get Picked Up</button>
+    </div>
+
+    <div class='list'>
+      <a ng-repeat='line in pickUpLines' class='item'>
+        <div class='row'>
+          <h1 class='col col-20 green word-wrap'>{{line.numberOfResponses}}</h1>
+          <div class='row col col-60'>
+            <h4>{{line.line}}</42>
+            <h4>{{line.date}}</h4>
+          </div>
+          <div class='row col col-20'>
+            Map
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- <div class='list'>
+      <a ng-repeat='person in views' class='item item-thumbnail-left'>
+        <img ng-src='{{person.image}}'>
+        <h2>{{person.name}}</h2>
+        <h4>{{person.age}}</h4>
+        <h4>{{person.location}}</h4>
+        <p>{{person.response}}</p>
+      </a>
+    </div> -->
   </ion-content>
 </ion-view>

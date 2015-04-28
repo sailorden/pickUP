@@ -1,5 +1,12 @@
 <ion-view view-title="">
   <ion-content>
-    <h1>Chat List</h1>
+    <div class='list'>
+      <a ng-repeat='chatter in chatters' class='item item-avatar' ng-href='#/app/chat'>
+        <img ng-src='{{chatter.image}}'>
+        <h2>{{chatter.name}}</h2>
+        <h4>{{chatter.age}}</h4>
+        <h4>{{chatter.location}}</h4>
+      </a>
+    </div>
   </ion-content>
 </ion-view>

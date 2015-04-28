@@ -1,5 +1,13 @@
 <ion-view view-title="">
   <ion-content>
-    <h1>Profile</h1>
+    <div class='userPicture'>
+      <img ng-src='{{user.picture}}'>
+    </div>
+      <h2 class='center'>{{user.name}}</h2>
+      <div class='row grayBack'>
+        <span class='col col-20 center doubleSize borderRight'>{{user.age}}</span>
+        <span class='col col-80 center doubleSize'>{{user.location}}</span>
+      </div>
+      <p class='col col-80 col-offset-10 aboveMargin-small'>{{user.bio}}</p>
   </ion-content>
 </ion-view>

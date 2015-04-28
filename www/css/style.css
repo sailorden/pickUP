@@ -9,3 +9,52 @@
   color: white;
   border-color: #223f71:
 }
+
+.aboveMargin-small {
+  margin-top: 2em;
+}
+
+.center {
+  text-align: center;
+}
+
+.userPicture {
+  text-align: center;
+}
+
+.userPicture img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.doubleSize {
+  font-size: 1.5em;
+}
+
+.grayBack {
+  background-color: #444;
+  color: white;
+}
+
+.borderRight {
+  border-right: 1px dotted white;
+  height: inherit;
+}
+
+.toggleOn {
+  background-color: #444;
+  color: #CCC;
+}
+
+.toggleOff {
+  background-color: #CCC;
+  color: #444;
+}
+
+.word-wrap {
+  
+}
+
+.green {
+  color: green;
+}

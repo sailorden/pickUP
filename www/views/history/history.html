@@ -1,5 +1,45 @@
 <ion-view view-title="">
   <ion-content>
-    <h1>History</h1>
+
+    <h1 class='center grayBack aboveMargin-small'>Your Pick Ups</h1>
+    <div class='row doubleSize'>
+      <div class='col col-80'>Total Pick Up Lines</div>
+      <div class='col col-20'>{{user.stats.myLines.numberOfDrops}}</div>
+    </div>
+    <div class='row doubleSize'>
+      <div class='col col-80'>Viewed Pick Up Lines</div>
+      <div class='col col-20'>{{user.stats.myLines.numberOfViews}}</div>
+    </div>
+    <div class='row doubleSize'>
+      <div class='col col-80'>Responses</div>
+      <div class='col col-20'>{{user.stats.myLines.dropResponses}}</div>
+    </div>
+    <div class='row doubleSize'>
+      <div class='col col-80'>You Accepted</div>
+      <div class='col col-20'>{{user.stats.myLines.dropAcceptedNumber}}</div>
+    </div>
+    <div class='row doubleSize'>
+      <div class='col col-80'>Pick Up Line Success Rate</div>
+      <div class='col col-20'>{{pickUpRate}}%</div>
+    </div>
+
+    <h1 class='center grayBack aboveMargin-small'>Getting Picked Up</h1>
+    <div class='row doubleSize'>
+      <div class='col col-80'>Total Views of Pick Up Lines</div>
+      <div class='col col-20'>{{user.stats.theirLines.numberOfViews}}</div>
+    </div>
+    <div class='row doubleSize'>
+      <div class='col col-80'>Number of Responses</div>
+      <div class='col col-20'>{{user.stats.theirLines.numberRespondedTo}}</div>
+    </div>
+    <div class='row doubleSize'>
+      <div class='col col-80'>Number of Accepted</div>
+      <div class='col col-20'>{{user.stats.theirLines.acceptedNumber}}</div>
+    </div>
+    <div class='row doubleSize'>
+      <div class='col col-80'>Response Success Rate</div>
+      <div class='col col-20'>{{gettingPickedUpRate}}%</div>
+    </div>
+
   </ion-content>
 </ion-view>
