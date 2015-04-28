@@ -18,6 +18,17 @@ em {
   margin-top: 2em;
 }
 
+.belowMargin-none {
+  margin-bottom: 0;
+}
+
+.historyHeaders {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+}
+
 .center {
   text-align: center;
 }
@@ -92,4 +103,12 @@ em {
   max-height: 80px;
   width:100%;
   height: 100%;
+}
+
+.odd {
+  background-color: lightgray;
+}
+
+.row + .row {
+  margin-top: 0px;
 }

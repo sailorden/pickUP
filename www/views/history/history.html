@@ -1,43 +1,43 @@
 <ion-view view-title="">
   <ion-content>
 
-    <h1 class='center grayBack aboveMargin-small'>Your Pick Ups</h1>
-    <div class='row doubleSize'>
-      <div class='col col-80'>Total Pick Up Lines</div>
+    <h1 class='center grayBack historyHeaders'>Your Pick Ups</h1>
+    <div class='row doubleSize odd'>
+      <div class='col col-80'>Pick Up Lines</div>
       <div class='col col-20'>{{user.stats.myLines.numberOfDrops}}</div>
     </div>
-    <div class='row doubleSize'>
-      <div class='col col-80'>Viewed Pick Up Lines</div>
+    <div class='row doubleSize even'>
+      <div class='col col-80'>Views</div>
       <div class='col col-20'>{{user.stats.myLines.numberOfViews}}</div>
     </div>
-    <div class='row doubleSize'>
+    <div class='row doubleSize odd'>
       <div class='col col-80'>Responses</div>
       <div class='col col-20'>{{user.stats.myLines.dropResponses}}</div>
     </div>
-    <div class='row doubleSize'>
+    <div class='row doubleSize even'>
       <div class='col col-80'>You Accepted</div>
       <div class='col col-20'>{{user.stats.myLines.dropAcceptedNumber}}</div>
     </div>
-    <div class='row doubleSize'>
-      <div class='col col-80'>Pick Up Line Success Rate</div>
+    <div class='row doubleSize odd'>
+      <div class='col col-80'>Success Rate</div>
       <div class='col col-20'>{{pickUpRate}}%</div>
     </div>
 
-    <h1 class='center grayBack aboveMargin-small'>Getting Picked Up</h1>
-    <div class='row doubleSize'>
-      <div class='col col-80'>Total Views of Pick Up Lines</div>
+    <h1 class='center grayBack historyHeaders'>Getting Picked Up</h1>
+    <div class='row doubleSize odd'>
+      <div class='col col-80'>You Viewed</div>
       <div class='col col-20'>{{user.stats.theirLines.numberOfViews}}</div>
     </div>
-    <div class='row doubleSize'>
-      <div class='col col-80'>Number of Responses</div>
+    <div class='row doubleSize even'>
+      <div class='col col-80'>Responsed To</div>
       <div class='col col-20'>{{user.stats.theirLines.numberRespondedTo}}</div>
     </div>
-    <div class='row doubleSize'>
-      <div class='col col-80'>Number of Accepted</div>
+    <div class='row doubleSize odd'>
+      <div class='col col-80'>They Accepted</div>
       <div class='col col-20'>{{user.stats.theirLines.acceptedNumber}}</div>
     </div>
-    <div class='row doubleSize'>
-      <div class='col col-80'>Response Success Rate</div>
+    <div class='row doubleSize even'>
+      <div class='col col-80'>Success Rate</div>
       <div class='col col-20'>{{gettingPickedUpRate}}%</div>
     </div>
 
