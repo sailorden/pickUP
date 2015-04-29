@@ -12,6 +12,15 @@ textarea {
   margin-left: 2em;
 }
 
+#appTitle {
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+
+#appSubTitle {
+  margin-bottom: 8em;
+}
+
 .button-facebook {
   background: #3b5998;
   color: white;
