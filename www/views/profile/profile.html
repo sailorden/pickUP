@@ -1,12 +1,12 @@
 <ion-view view-title="">
   <ion-content>
     <div class='userPicture'>
-      <img ng-src='{{user.picture}}'>
+      <img ng-src='{{user.image}}'>
     </div>
       <h2 class='center'>{{user.name}}</h2>
       <div class='row grayBack'>
         <span class='col col-20 center doubleSize borderRight'>{{user.age}}</span>
-        <span class='col col-80 center doubleSize'>{{user.location}}</span>
+        <span class='col col-80 center doubleSize'>{{user.city}}, {{user.state}}</span>
       </div>
       <!-- <p class='col col-80 col-offset-10 aboveMargin-small'>{{user.bio}}</p> -->
       <textarea class='col col-80 col-offset-10 aboveMargin-small' placeholder='Write a Short Bio'>{{user.bio}}</textarea>

@@ -2,26 +2,40 @@
 
 angular.module('pickUp')
 
-.factory('User', ['$http', function($http) {
+.factory('User', [function() {
 
-  var userRef = new Firebase("https://pickupapp.firebaseio.com/users");
+  var user = {};
 
-  function status(user) {
-    // Create a callback which logs the current auth state
-    function authDataCallback(authData) {
-      if (authData) {
-        console.log("User " + authData.uid + " is logged in with " + authData.provider);
-      } else {
-        console.log("User is logged out");
-      }
-    }
+  function save(savedUser) {
+    user = savedUser;
+    console.log('user:', user);
+  };
 
-    // Register the callback to be fired every time auth state changes
-    var ref = new Firebase("https://pickupapp.firebaseio.com");
-    ref.onAuth(authDataCallback);
-  }
+  function get() {
+    console.log('get user:', user);
+    return user;
+  };
+
+  return { save: save, get: get };
+
+  // var userRef = new Firebase("https://pickupapp.firebaseio.com/users");
+
+  // function status(user) {
+  //   // Create a callback which logs the current auth state
+  //   function authDataCallback(authData) {
+  //     if (authData) {
+  //       console.log("User " + authData.uid + " is logged in with " + authData.provider);
+  //     } else {
+  //       console.log("User is logged out");
+  //     }
+  //   }
+
+  //   // Register the callback to be fired every time auth state changes
+  //   var ref = new Firebase("https://pickupapp.firebaseio.com");
+  //   ref.onAuth(authDataCallback);
+  // }
 
 
-  return { status: status };
+  // return { status: status };
 
 }]);

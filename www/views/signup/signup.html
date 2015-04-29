@@ -1,0 +1,35 @@
+<ion-view view-title="">
+  <ion-content>
+
+  <!-- <label type="text" ng-model="birthday" ng-click="showDatePicker()">mm/dd/yyyy</label> -->
+
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <!-- commented out birthday, will do the math later, for now just put age -->
+        <!-- <span class="input-label">Birthday</span>
+        <input type='date'> -->
+        <span class='input-label'>Age</span>
+        <input type='number' ng-model='user.age' placeholder='Age'>
+
+
+        <!-- <select class='col col-33' ng-options='date.month for date in dates' ng-model='month'>
+          <
+        </select> -->
+        <!-- <input type='number' class='col col-33' ng-model='month' min='01' max='12' placeholder="MM">
+        <input type='number' class='col col-33' ng-model='day' min='01' max='31' placeholder='DD'>
+        <input type='number' class='col col-33' ng-model='year' min='1900' max='2000' placeholder='YYYY'>  -->
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">City</span>
+        <input type="text" placeholder="City" ng-model='user.city'>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">State/Province/Country</span>
+        <input type="text" placeholder="State/Province/Country" ng-model='user.state'>
+      </label>
+    </div>
+
+    <button class='button button-block' ng-click='createUser(user)'>Register</button>
+
+  </ion-content>
+</ion-view>

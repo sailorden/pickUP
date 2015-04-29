@@ -23,10 +23,22 @@ angular.module('pickUp', ['ionic', 'ui.router', 'ngCordova'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+  .state('splashPage', {
+    url: '/',
+    templateUrl: 'views/splashPage/splashPage.html',
+    controller: 'SplashPage'
+  })
+
   .state('login', {
     url: "/login",
     templateUrl: "views/login/login.html",
     controller: 'LoginCtrl'
+  })
+
+  .state('signup', {
+    url: '/signup',
+    templateUrl: 'views/signup/signup.html',
+    controller: 'SignupCtrl'
   })
 
   .state('app', {
@@ -127,5 +139,5 @@ angular.module('pickUp', ['ionic', 'ui.router', 'ngCordova'])
   })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/');
 });
