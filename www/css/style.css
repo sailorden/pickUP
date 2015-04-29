@@ -4,6 +4,10 @@ em {
   font-style: italic;
 }
 
+textarea {
+  resize: none;
+}
+
 .navbarButton {
   margin-left: 2em;
 }
