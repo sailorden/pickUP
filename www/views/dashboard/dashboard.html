@@ -7,7 +7,7 @@
 
     <ul class='list' ng-show='seeMyDrops'>
       <li ng-repeat='line in pickUpLines' style='border: 1px solid lightgray'>
-        <div class='row' on-touch='togglePickUp(line._id)'>
+        <div class='row' ng-click='togglePickUp(line._id)'>
           <div class='col col-20' style='margin: auto 0; padding: 0'>
             <div class='row col col-middle'>
               <div class='icon ion-person-stalker center tripleSize'></div>
