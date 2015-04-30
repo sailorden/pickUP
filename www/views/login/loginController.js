@@ -47,13 +47,12 @@ angular.module('pickUp')
     ref.authWithOAuthPopup("facebook", function(error, authData) {
       if (error) {
         console.log("Login Failed!", error);
-        alert('error');
+        alert('error with login');
       } else {
         // console.log("Authenticated successfully with payload:", authData);
 
       // checks if they are already in the database
         ref.child('/users').orderByKey().equalTo(authData.facebook.id).limitToFirst(1).once('value', function(snapshot) {
-          console.log('results', snapshot.val());
 
         // if not in database, user is signing up, so go to signup view
           if (snapshot.val() === null) {
@@ -68,8 +67,8 @@ angular.module('pickUp')
             //   gender: authData.facebook.cachedUserProfile.gender,
             //   image: authData.facebook.cachedUserProfile.picture.data.url
             // };
-            console.log('snapshot', snapshot.val());
-            User.save(snapshot.val());
+            console.log('snapshot login', snapshot.val());
+            User.save(snapshot.val()[authData.facebook.id]);
             $state.go('app.dashboard');
           }
         });

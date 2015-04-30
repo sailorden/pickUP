@@ -9,7 +9,7 @@
 
 angular.module('pickUp')
 
-.controller('SplashPage', ['$scope', '$timeout', '$state', 'User', function($scope, $timeout, $state, User) {
+.controller('SplashPageCtrl', ['$scope', '$timeout', '$state', 'User', function($scope, $timeout, $state, User) {
 
   var ref = new Firebase("https://pickupapp.firebaseio.com");
 
@@ -19,19 +19,20 @@ angular.module('pickUp')
     if (authData) {
       // check database
       ref.child('/users').orderByKey().equalTo(authData.facebook.id).limitToFirst(1).once('value', function(snapshot) {
-        console.log('results', snapshot.val());
+        console.log('snapshot splash', snapshot.val());
       // if logged in but not in database, user quit in the process of signing up,
       // so user is still signing up, so go to signup view.
         if (snapshot.val() === null) {
           $state.go('signup');
         } else {  // if user in database, save user locally and route to dashboard
-          var user = {
-            userId: authData.facebook.id,
-            name: authData.facebook.cachedUserProfile.first_name,
-            gender: authData.facebook.cachedUserProfile.gender,
-            image: authData.facebook.cachedUserProfile.picture.data.url
-          };
-          User.save(user);
+          // var user = {
+          //   userId: authData.facebook.id,
+          //   name: authData.facebook.cachedUserProfile.first_name,
+          //   gender: authData.facebook.cachedUserProfile.gender,
+          //   image: authData.facebook.cachedUserProfile.picture.data.url
+          // };
+          User.save(snapshot.val()[authData.facebook.id]);
+          console.log('going to dash from splash');
           $state.go('app.dashboard');
         }
       });

@@ -8,11 +8,12 @@ angular.module('pickUp')
 
   function save(savedUser) {
     user = savedUser;
-    console.log('user:', user);
+    console.log('userSave:', user);
+    return user;
   };
 
   function get() {
-    console.log('get user:', user);
+    console.log('userGet:', user);
     return user;
   };
 

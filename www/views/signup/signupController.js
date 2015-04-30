@@ -2,7 +2,7 @@
 
 angular.module('pickUp')
 
-.controller('SignupCtrl', ['$scope', '$rootScope', '$state', '$cordovaDatePicker', '$ionicPlatform', 'User', function($scope, $rootScope, $state, $cordovaDatePicker, $ionicPlatform, User) {
+.controller('SignupCtrl', ['$scope', '$rootScope', '$state', 'User', function($scope, $rootScope, $state, User) {
 
   var ref = new Firebase("https://pickupapp.firebaseio.com");
   // saving to database with key of facebook id so it will save and update everytime
@@ -10,6 +10,7 @@ angular.module('pickUp')
   $scope.createUser = function(user) {
     console.log('user', user);
     ref.child('/users/'+user.id).set({
+      id: user.id,
       name: user.first_name,
       gender: user.gender,
       image: user.picture.data.url,
@@ -28,6 +29,7 @@ angular.module('pickUp')
       age: user.age,
       image: user.picture.data.url
     });
+    console.log('in signupCtrl');
     $state.go('app.dashboard');
   };
 

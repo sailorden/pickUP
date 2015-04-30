@@ -26,7 +26,7 @@ angular.module('pickUp', ['ionic', 'ui.router', 'ngCordova'])
   .state('splashPage', {
     url: '/',
     templateUrl: 'views/splashPage/splashPage.html',
-    controller: 'SplashPage'
+    controller: 'SplashPageCtrl'
   })
 
   .state('login', {

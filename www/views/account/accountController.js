@@ -8,7 +8,7 @@ angular.module('pickUp')
 
   $scope.logout = function() {
     ref.unauth();
-    $state.go('splashPage');
+    $state.go('login');
   }
 
   $scope.deleteAccount = function() {
